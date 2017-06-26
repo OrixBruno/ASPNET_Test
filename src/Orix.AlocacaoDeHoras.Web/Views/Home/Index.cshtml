@@ -1,0 +1,50 @@
+﻿@model Orix.AlocacaoDeHoras.Web.ViewModels.ContaViewModel
+
+    <div class="padding-5percent">
+        <div id="mensagemSucesso" class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p>Conectado com sucesso!</p>
+        </div>
+        <form id="frmLogin" name="frmLogin" asp-area="" asp-controller="Home" asp-action="Logar" method="post">
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input type="text" class="form-control" id="usuario" name="usuario" asp-for="Usuario" value="bsnascimento" placeholder="usuario">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha" name="senha" asp-for="Senha" value="" placeholder="senha">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="salvarUsuario" name="salvarUsuario" asp-for="SalvarUsuario" checked> Salvar usuário
+                </label>
+            </div>
+            <button type="submit" id="logar" class="btn btn-default">Logar</button>
+            <button type="button" id="alocar" class="btn btn-default">Alocar horas</button>
+        </form>
+    </div>
+
+@section scripts{
+<script type="text/javascript">
+        $(function () {
+            $('#mensagemSucesso').hide();
+            $('#alocar').hide();
+        });
+
+        $.fn.serializeObject = function () {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function () {
+                if (o[this.name] !== undefined) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+</script>
+}

@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8531A55C-924C-4771-BBD4-DDE5F0E2F944}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{54DBAE90-3BBF-4F22-9776-022648B6F079}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreTeste", "src\AspNetCoreTeste\AspNetCoreTeste.xproj", "{E83668EB-F353-4544-B07A-168B818EB606}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Orix.AlocacaoDeHoras.Web", "src\Orix.AlocacaoDeHoras.Web\Orix.AlocacaoDeHoras.Web.xproj", "{ED9482BD-E0E7-4DCD-BA9B-6BEBC9124C82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E83668EB-F353-4544-B07A-168B818EB606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83668EB-F353-4544-B07A-168B818EB606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83668EB-F353-4544-B07A-168B818EB606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83668EB-F353-4544-B07A-168B818EB606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9482BD-E0E7-4DCD-BA9B-6BEBC9124C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9482BD-E0E7-4DCD-BA9B-6BEBC9124C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9482BD-E0E7-4DCD-BA9B-6BEBC9124C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9482BD-E0E7-4DCD-BA9B-6BEBC9124C82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E83668EB-F353-4544-B07A-168B818EB606} = {8531A55C-924C-4771-BBD4-DDE5F0E2F944}
+		{ED9482BD-E0E7-4DCD-BA9B-6BEBC9124C82} = {8531A55C-924C-4771-BBD4-DDE5F0E2F944}
+	EndGlobalSection
+EndGlobal

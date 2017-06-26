@@ -1,0 +1,18 @@
+﻿@model Orix.AlocacaoDeHoras.Web.ViewModels.ContaViewModel
+
+<div id="mensagemSucesso" class="alert alert-@ViewBag.Class alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <p>Conectado com sucesso! Credencial: @Model.CredencialValida - Dia da Semana:@DateTime.Now.DayOfWeek</p>
+    <p>@ViewBag.Retorno</p>
+</div>
+<div id="response">
+
+</div>
+@section scripts{
+
+
+}
+
+@{
+
+}

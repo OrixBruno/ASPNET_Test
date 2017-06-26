@@ -1,0 +1,280 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 12pt "Tahoma";
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.border-top-2px{
+    border-top: 2px solid;
+}
+
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 0.5cm;
+    margin: 1cm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.subpage {
+    padding: 1cm;
+    border: 5px black solid;
+    height: 286mm;
+    outline: 0.5cm #D3D3D3 solid;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print and (color) {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+.tituloLista {
+    border-bottom: 5px black solid;
+    border-top: 5px black solid;
+    padding: 10px 0px 10px 0px;
+}
+
+    .tituloLista > h3 {
+        text-align: right;
+        margin: 0px;
+    }
+
+.corpoLista {
+    width: 670px;
+    height: 920px;
+    border: 5px black solid;
+    margin-top: 25px;
+}
+
+.height-25 {
+    height: 25%;
+}
+
+.primeira-linha {
+    border-bottom: 5px black solid;
+}
+
+.float-left {
+    float: left;
+}
+
+.width-50 {
+    width: 50%;
+    height: 100%;
+}
+
+.width-90 {
+    width: 90%;
+}
+
+.width-10 {
+    width: 10%;
+}
+
+.border-left {
+    border-left: 5px black solid;
+}
+
+.linha-dados {
+    width: 100%;
+    height: 16%;
+    /*border-bottom: 1px black solid;*/
+}
+
+.height-5 {
+    height: 5%;
+}
+
+.linha-campo-qs {
+    width: 100%;
+    height: 84%;
+    /*border-bottom: 1px black solid;*/
+}
+
+.linha-dados-calendario {
+    height: 20%;
+}
+
+.linha-dados b {
+    font-size: 23px;
+}
+
+.padding-top-left-5px {
+    padding: 4px 0px 0px 5px;
+}
+
+.textAlign-center {
+    text-align: center;
+}
+
+.borderRadius-5px {
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+.height-28px {
+    height: 28px;
+}
+
+/*CORES DOS MAPAS*/
+.bc-a {
+    background-color: #006ee6;
+}
+
+.bc-b {
+    background-color: #14c200;
+}
+
+    .bc-b b {
+        color: white;
+    }
+
+.bc-c {
+    background-color: #ffd300;
+}
+
+.bc-d {
+    background-color: #d5ff00;
+}
+
+.bc-e {
+    background-color: #000eb1;
+}
+
+    .bc-e b {
+        color: white;
+    }
+
+.bc-f {
+    background-color: #013b06;
+}
+
+    .bc-f b {
+        color: white;
+    }
+
+.bc-g {
+    background-color: #ee5f00;
+}
+
+    .bc-g b {
+        color: white;
+    }
+
+.bc-h {
+    background-color: #492001;
+}
+
+    .bc-h b {
+        color: white;
+    }
+
+.bc-i {
+    background-color: #009fb5;
+}
+
+    .bc-i b {
+        color: white;
+    }
+/*CORES DOS MAPAS*/
+
+.table-semana {
+}
+
+    .table-semana tr {
+        height: 38px;
+    }
+
+    .table-semana td {
+        width: 47px;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: bold;
+        font-size: 21px;
+    }
+
+.table-qs-td {
+    width: 47px;
+    text-align: left !important;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 21px !important;
+}
+
+.table-qs-tr {
+    height: 55px !important;
+}
+
+.table-qs-calend {
+}
+
+.table-qs-col {
+    width: 47px;
+}
+
+.table-qs tr {
+    height: 48px;
+}
+
+
+.calendario {
+    width: 100%;
+    height: 202px;
+}
+
+    .calendario tr {
+        height: 16%;
+    }
+
+    .calendario > thead td {
+        font-weight: bold;
+        background-color: #013b06;
+        color: white;
+        font-size: 18px;
+    }
+
+    .calendario > tbody td {
+    }
+
+    .calendario td {
+        width: 14.28%;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 15px;
+    }
+
+tbody a h3 {
+    margin: 0;
+}
+
+.ativo {
+    background-color: red;
+    color: white;
+}
+
+.semanaAtivo {
+}

@@ -1,0 +1,13 @@
+﻿@model DateTime
+
+<div>
+    <form class="" asp-action="CampoPorData" asp-controller="Lista" method="post">
+        <div class="form-group">
+            <label>Semana</label>
+            <select class="form-control" asp-for="Date" asp-items="ViewBag.ListaDatas"></select>
+        </div>
+        <div class="">
+            <input type="submit" id="Buscar" value="Buscar" class="btn btn-success" />
+        </div>
+    </form>
+</div>

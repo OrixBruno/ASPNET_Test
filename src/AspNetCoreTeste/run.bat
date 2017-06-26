@@ -1,0 +1,2 @@
+dotnet AspNetCoreTeste.dll
+PAUSE

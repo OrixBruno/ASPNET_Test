@@ -1,0 +1,269 @@
+﻿@model PregacaoSemanaViewModel
+
+<div class="padding-5percent">
+    <form class="" asp-action="Gerador" asp-controller="Lista" method="post">
+
+        <div class="form-group">
+            <label>Semana</label>
+            <select class="form-control" asp-for="CampoTercaItaim.Dia" asp-items="ViewBag.SelectListSemanas"></select>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="visita"> Visita do Superintendente
+            </label>
+        </div>
+        <hr />
+        <div class="form-inline" id="divDirigentes">
+            <div>
+                <h3>Dirigentes manhã ITAIM:</h3>
+            </div>
+            <div class="form-group">
+                <label>Terça:</label>
+                <select class="form-control" asp-for="CampoTercaItaim.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoTercaItaim.PossuiCampo">
+            </div>
+            <div class="form-group">
+                <label>Quarta:</label>
+                <select class="form-control" asp-for="CampoQuartaItaim.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoQuartaItaim.PossuiCampo">
+            </div>
+            <div class="form-group">
+                <label>Quinta:</label>
+                <select class="form-control" asp-for="CampoQuintaItaim.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoQuintaItaim.PossuiCampo">
+            </div>
+
+            <div class="form-group">
+                <label>Sexta:</label>
+                <select class="form-control" asp-for="CampoSextaItaim.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoSextaItaim.PossuiCampo">
+            </div>
+        </div>
+        <div class="form-inline" id="divDirigentes">
+            <div>
+                <h3>Dirigentes manhã FERRAZ:</h3>
+            </div>
+            <div class="form-group">
+                <label>Segunda:</label>
+                <select class="form-control" asp-for="CampoSegundaFerraz.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoSegundaFerraz.PossuiCampo">
+            </div>
+            <div class="form-group">
+                <label>Terça:</label>
+                <select class="form-control" asp-for="CampoTercaFerraz.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoTercaFerraz.PossuiCampo">
+            </div>
+            <div class="form-group">
+                <label>Quarta:</label>
+                <select class="form-control" asp-for="CampoQuartaFerraz.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoQuartaFerraz.PossuiCampo">
+            </div>
+            <div class="form-group">
+                <label>Quinta:</label>
+                <select class="form-control" asp-for="CampoQuintaFerraz.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoQuintaFerraz.PossuiCampo">
+            </div>
+
+            <div class="form-group">
+                <label>Sexta:</label>
+                <select class="form-control" asp-for="CampoSextaFerraz.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                <input type="checkbox" asp-for="CampoSextaFerraz.PossuiCampo">
+            </div>
+        </div>
+        <div class="form-inline" id="divDirigentes">
+            <div>
+                <h3>Dirigentes fim de semana:</h3>
+            </div>
+            <div class="form-group">
+                <label>Sabado Grupo 1:</label>
+                <select class="form-control" asp-for="CampoSabado1.Dirigente" asp-items="ViewBag.SelectListDirigente" value="Rafael"></select>
+            </div>
+            <div class="form-group">
+                <label>Sabado Grupo 2:</label>
+                <select class="form-control" asp-for="CampoSabado2.Dirigente" asp-items="ViewBag.SelectListDirigente" value="José Carlos"></select>
+            </div>
+            <div class="form-group">
+                <label>Sabado Grupo 3:</label>
+                <select class="form-control" asp-for="CampoSabado3.Dirigente" asp-items="ViewBag.SelectListDirigente" value="Roberto"></select>
+            </div>
+            <div class="form-group">
+                <label>Domingo:</label>
+                <select class="form-control" asp-for="CampoDomingo.Dirigente" asp-items="ViewBag.SelectListDirigente"></select>
+            </div>
+        </div>
+        <hr />
+        <div class="form-inline">
+            <div>
+                <h3>Saídas ITAIM:</h3>
+            </div>
+            <div class="form-group">
+                <label>Terça:</label>
+                <select class="form-control" asp-for="CampoTercaItaim.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Quarta:</label>
+                <select class="form-control" asp-for="CampoQuartaItaim.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Quinta:</label>
+                <select class="form-control" asp-for="CampoQuintaItaim.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Sexta:</label>
+                <select class="form-control" asp-for="CampoSextaItaim.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div>
+                <h3>Saídas FERRAZ:</h3>
+            </div>
+            <div class="form-group">
+                <label>Segunda:</label>
+                <select class="form-control" asp-for="CampoSegundaFerraz.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Terça:</label>
+                <select class="form-control" asp-for="CampoTercaFerraz.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Quarta:</label>
+                <select class="form-control" asp-for="CampoQuartaFerraz.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Quinta:</label>
+                <select class="form-control" asp-for="CampoQuintaFerraz.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Sexta:</label>
+                <select class="form-control" asp-for="CampoSextaFerraz.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div>
+                <h3>Saídas fim de semana:</h3>
+            </div>
+            <div class="form-group">
+                <label>Sabado Grupo 1:</label>
+                <select class="form-control" asp-for="CampoSabado1.Local" asp-items="ViewBag.SelectListSaidas"  value="Salão Fazenda Itaim"></select>
+            </div>
+            <div class="form-group">
+                <label>Sabado Grupo 2:</label>
+                <select class="form-control" asp-for="CampoSabado2.Local" asp-items="ViewBag.SelectListSaidas"  value="Salão LS Guaianases"></select>
+            </div>
+            <div class="form-group">
+                <label>Sabado Grupo 3:</label>
+                <select class="form-control" asp-for="CampoSabado3.Local" asp-items="ViewBag.SelectListSaidas"  value="Salão LS Ferraz"></select>
+            </div>
+            <div class="form-group">
+                <label>Domingo:</label>
+                <select class="form-control" asp-for="CampoDomingo.Local" asp-items="ViewBag.SelectListSaidas"  value="Salão LS Guaianases"></select>
+            </div>
+        </div>
+        <hr />
+        <div class="form-inline">
+            <div>
+                <h3>Territórios ITAIM:</h3>
+            </div>
+            <div class="form-group">
+                <label>Segunda:</label>
+                <select class="form-control" asp-for="CampoSegundaItaim.Mapa" asp-items="ViewBag.SelectListTerriorios"></select>
+            </div>
+            <div class="form-group">
+                <label>Terça:</label>
+                <select class="form-control" asp-for="CampoTercaItaim.Mapa" asp-items="ViewBag.SelectListTerriorios"></select>
+            </div>
+            <div class="form-group">
+                <label>Quarta:</label>
+                <select class="form-control" asp-for="CampoQuartaItaim.Mapa" asp-items="ViewBag.SelectListTerriorios"></select>
+            </div>
+            <div class="form-group">
+                <label>Quinta:</label>
+                <select class="form-control" asp-for="CampoQuintaItaim.Mapa" asp-items="ViewBag.SelectListTerriorios"></select>
+            </div>
+            <div class="form-group">
+                <label>Sexta:</label>
+                <select class="form-control" asp-for="CampoSextaItaim.Mapa" asp-items="ViewBag.SelectListTerriorios"></select>
+            </div>
+        </div>
+        <div class="form-inline">
+            <div>
+                <h3>Territórios fim de semana:</h3>
+            </div>
+            <div class="form-group">
+                <label>Sabado Grupo 1:</label>
+                <select class="form-control" asp-for="CampoSabado1.Mapa" asp-items="ViewBag.SelectListTerriorios" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Sabado  Grupo 2:</label>
+                <select class="form-control" asp-for="CampoSabado2.Mapa" asp-items="ViewBag.SelectListTerriorios" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Sabado  Grupo 3:</label>
+                <select class="form-control" asp-for="CampoSabado3.Mapa" asp-items="ViewBag.SelectListTerriorios" disabled="disabled"></select>
+            </div>
+            <div class="form-group">
+                <label>Domingo:</label>
+                <select class="form-control" asp-for="CampoDomingo.Mapa" asp-items="ViewBag.SelectListTerriorios" disabled="disabled"></select>
+            </div>
+        </div>
+        <div class="">
+            <input type="submit" id="Gerar" value="Gerar" class="btn btn-success" />
+        </div>
+    </form>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        $("#visita").click(function () {
+            if ($(this).is(':checked')) {
+                $('#divDirigentes > div > select').attr('disabled', true);
+                $('#divDirigentes > div > select').val('Ricardo');
+            } else {
+                $('#divDirigentes > div > select').attr('disabled', false);
+                $('#divDirigentes > div > select').val('Marcos');
+            }
+        });
+        $(function () {
+            $('#CampoTercaItaim_PossuiCampo').is(':checked') ? $('#CampoTercaItaim_Dirigente').attr('disabled', false) : $('#CampoTercaItaim_Dirigente').attr('disabled', true);
+            $('#CampoTercaItaim_PossuiCampo').is(':checked') ? $('#CampoTercaItaim_Local').attr('disabled', false) : $('#CampoTercaItaim_Local').attr('disabled', true);;
+        });
+        //ITAIM
+        $('#CampoTercaItaim_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoTercaItaim_Dirigente').attr('disabled', false) : $('#CampoTercaItaim_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoTercaItaim_Local').attr('disabled', false) : $('#CampoTercaItaim_Local').attr('disabled', true);
+        });
+        $('#CampoQuintaItaim_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoQuintaItaim_Dirigente').attr('disabled', false) : $('#CampoQuintaItaim_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoQuintaItaim_Local').attr('disabled', false) : $('#CampoQuintaItaim_Local').attr('disabled', true);
+        });
+        $('#CampoQuartaItaim_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoQuartaItaim_Dirigente').attr('disabled', false) : $('#CampoQuartaItaim_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoQuartaItaim_Local').attr('disabled', false) : $('#CampoQuartaItaim_Local').attr('disabled', true);
+        });
+        $('#CampoSextaItaim_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoSextaItaim_Dirigente').attr('disabled', false) : $('#CampoSextaItaim_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoSextaItaim_Local').attr('disabled', false) : $('#CampoSextaItaim_Local').attr('disabled', true);
+        });
+
+        //FERRAZ
+        $('#CampoSegundaFerraz_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoSegundaFerraz_Dirigente').attr('disabled', false) : $('#CampoSegundaFerraz_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoSegundaFerraz_Local').attr('disabled', false) : $('#CampoSegundaFerraz_Local').attr('disabled', true);
+        });
+        $('#CampoTercaFerraz_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoTercaFerraz_Dirigente').attr('disabled', false) : $('#CampoTercaFerraz_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoTercaFerraz_Local').attr('disabled', false) : $('#CampoTercaFerraz_Local').attr('disabled', true);
+        });
+        $('#CampoQuartaFerraz_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoQuartaFerraz_Dirigente').attr('disabled', false) : $('#CampoQuartaFerraz_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoQuartaFerraz_Local').attr('disabled', false) : $('#CampoQuartaFerraz_Local').attr('disabled', true);
+        });
+        $('#CampoQuintaFerraz_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoQuintaFerraz_Dirigente').attr('disabled', false) : $('#CampoQuintaFerraz_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoQuintaFerraz_Local').attr('disabled', false) : $('#CampoQuintaFerraz_Local').attr('disabled', true);
+        });
+        $('#CampoSextaFerraz_PossuiCampo').click(function () {
+            $(this).is(':checked') ? $('#CampoSextaFerraz_Dirigente').attr('disabled', false) : $('#CampoSextaFerraz_Dirigente').attr('disabled', true);
+            $(this).is(':checked') ? $('#CampoSextaFerraz_Local').attr('disabled', false) : $('#CampoSextaFerraz_Local').attr('disabled', true);
+        });
+    </script>
+}
