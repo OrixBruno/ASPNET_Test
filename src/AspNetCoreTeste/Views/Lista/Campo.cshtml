@@ -7,17 +7,17 @@
         <div class="subpage">
             <div class="tituloLista">
                 <h3>
-                    <b style="color: red;">ALTERAR -</b>
+                    <b style="color: red;">@Model.PregacaoNaSemana.TerritorioLista -</b>
                     Programação de Saídas de Campo de
-                    @Model.PregacaoNaSemana.CampoSegundaItaim.Dia.Day
-                    @(Model.PregacaoNaSemana.CampoSegundaItaim.Dia.Month != Model.PregacaoNaSemana.CampoDomingo.Dia.Month ? "de " + @Calendario.Meses[Model.PregacaoNaSemana.CampoSegundaItaim.Dia.Month] : " ") á
+                    @Model.PregacaoNaSemana.CampoSegunda1.Dia.Day
+                    @(Model.PregacaoNaSemana.CampoSegunda1.Dia.Month != Model.PregacaoNaSemana.CampoDomingo.Dia.Month ? "de " + @Calendario.Meses[Model.PregacaoNaSemana.CampoSegunda1.Dia.Month] : " ") á
                     @Model.PregacaoNaSemana.CampoDomingo.Dia.Day de
                     @Calendario.Meses[Model.PregacaoNaSemana.CampoDomingo.Dia.Month]
                 </h3>
             </div>
             <div class="corpoLista">
                 <div class="height-25 primeira-linha">
-                    <div class="float-left width-50" style="display:@(Model.PregacaoNaSemana.CampoSegundaFerraz.PossuiCampo?"none":"");">
+                    <div class="float-left width-50" style="display:@(Model.PregacaoNaSemana.CampoSegunda2.PossuiCampo?"none":"");">
                         <div class="linha-dados height-5">
                             <div class="float-left width-90">
                                 <b>MENSAL - @Calendario.Meses[Model.PregacaoNaSemana.CampoDomingo.Dia.Month]</b>
@@ -234,29 +234,26 @@
                                 </table>
                             </div>
                     </div>
-                    <div class="float-left width-50" style="display:@(Model.PregacaoNaSemana.CampoSegundaFerraz.PossuiCampo?"":"none");">
+                    <div class="float-left width-50" style="display:@(Model.PregacaoNaSemana.CampoSegunda2.PossuiCampo?"":"none");">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>SEGUNDA/@Model.PregacaoNaSemana.CampoSegundaItaim.Dia.Day - 09:00</b>
-                            </div>
-                            <div class="float-left width-10 textAlign-center borderRadius-5px height-28px bc-@Model.PregacaoNaSemana.CampoTercaItaim.Mapa.ToLower()">
-                                <b class="" style="display:@(Model.PregacaoNaSemana.CampoSegundaItaim.PossuiCampo?"":"none");">@Model.PregacaoNaSemana.CampoSegundaItaim.Mapa</b>
+                                <b>SEGUNDA/@Model.PregacaoNaSemana.CampoSegunda1.Dia.Day - 09:00</b>
                             </div>
                         </div>
                         <div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSegundaItaim.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSegundaItaim.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSegunda1.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSegunda1.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSegundaItaim.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSegundaItaim.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSegunda1.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSegunda1.Local</b>
                             </div>
                         </div>
                         <div class="border-top-2px">
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSegundaFerraz.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSegundaFerraz.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSegunda2.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSegunda2.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSegundaFerraz.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSegundaFerraz.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSegunda2.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSegunda2.Local</b>
                             </div>
                         </div>
                         <div class="linha-dados linha-dados-calendario">
@@ -278,26 +275,23 @@
                     <div class="float-left width-50 border-left">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>TERÇA/@Model.PregacaoNaSemana.CampoTercaItaim.Dia.Day - 14:00</b>
-                            </div>
-                            <div class="float-left width-10 textAlign-center borderRadius-5px height-28px bc-@Model.PregacaoNaSemana.CampoTercaItaim.Mapa.ToLower()">
-                                <b class="" style="display:@(Model.PregacaoNaSemana.CampoTercaItaim.PossuiCampo && Model.PregacaoNaSemana.CampoTercaFerraz.PossuiCampo ?"":"none");">@Model.PregacaoNaSemana.CampoTercaItaim.Mapa</b>
+                                <b>TERÇA/@Model.PregacaoNaSemana.CampoTerca1.Dia.Day - 14:00</b>
                             </div>
                         </div>
                         <div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoTercaItaim.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoTercaItaim.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoTerca1.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoTerca1.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoTercaItaim.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoTercaItaim.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoTerca1.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoTerca1.Local</b>
                             </div>
                         </div>
                         <div class="border-top-2px">
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoTercaFerraz.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoTercaFerraz.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoTerca2.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoTerca2.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoTercaFerraz.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoTercaFerraz.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoTerca2.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoTerca2.Local</b>
                             </div>
                         </div>
                         <div class="linha-dados linha-dados-calendario">
@@ -322,26 +316,23 @@
                     <div class="float-left width-50">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>QUARTA/@Model.PregacaoNaSemana.CampoQuartaItaim.Dia.Day - 09:00</b>
-                            </div>
-                            <div class="float-left width-10 textAlign-center borderRadius-5px height-28px bc-@Model.PregacaoNaSemana.CampoQuartaItaim.Mapa.ToLower()">
-                                <b class="" style="display:@(Model.PregacaoNaSemana.CampoQuartaItaim.PossuiCampo && Model.PregacaoNaSemana.CampoQuartaFerraz.PossuiCampo?"":"none");">@Model.PregacaoNaSemana.CampoQuartaItaim.Mapa</b>
+                                <b>QUARTA/@Model.PregacaoNaSemana.CampoQuarta1.Dia.Day - 09:00</b>
                             </div>
                         </div>
                         <div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuartaItaim.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuartaItaim.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuarta1.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuarta1.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuartaItaim.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuartaItaim.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuarta1.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuarta1.Local</b>
                             </div>
                         </div>
                         <div class="border-top-2px">
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuartaFerraz.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuartaFerraz.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuarta2.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuarta2.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuartaFerraz.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuartaFerraz.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuarta2.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuarta2.Local</b>
                             </div>
                         </div>
                         <div class="linha-dados linha-dados-calendario">
@@ -363,26 +354,23 @@
                     <div class="float-left width-50 border-left">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>QUINTA/@Model.PregacaoNaSemana.CampoQuintaItaim.Dia.Day - 09:00</b>
-                            </div>
-                            <div class="float-left width-10 textAlign-center borderRadius-5px height-28px bc-@Model.PregacaoNaSemana.CampoQuintaItaim.Mapa.ToLower()">
-                                <b class="" style="display:@(Model.PregacaoNaSemana.CampoQuintaItaim.PossuiCampo && Model.PregacaoNaSemana.CampoQuintaFerraz.PossuiCampo?"":"none");">@Model.PregacaoNaSemana.CampoQuintaItaim.Mapa</b>
+                                <b>QUINTA/@Model.PregacaoNaSemana.CampoQuinta1.Dia.Day - 09:00</b>
                             </div>
                         </div>
                         <div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuintaItaim.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuintaItaim.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuinta1.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuinta1.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuintaItaim.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuintaItaim.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuinta1.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuinta1.Local</b>
                             </div>
                         </div>
                         <div class="border-top-2px">
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuintaFerraz.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuintaFerraz.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuinta2.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoQuinta2.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoQuintaFerraz.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuintaFerraz.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoQuinta2.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoQuinta2.Local</b>
                             </div>
                         </div>
                         <div class="linha-dados linha-dados-calendario">
@@ -407,26 +395,23 @@
                     <div class="float-left width-50">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>SEXTA/@Model.PregacaoNaSemana.CampoSextaItaim.Dia.Day - 09:00</b>
-                            </div>
-                            <div class="float-left width-10 textAlign-center borderRadius-5px height-28px bc-@Model.PregacaoNaSemana.CampoSextaItaim.Mapa.ToLower()">
-                                <b class="" style="display:@(Model.PregacaoNaSemana.CampoSextaItaim.PossuiCampo && Model.PregacaoNaSemana.CampoSextaFerraz.PossuiCampo?"":"none");">@Model.PregacaoNaSemana.CampoSextaItaim.Mapa</b>
+                                <b>SEXTA/@Model.PregacaoNaSemana.CampoSexta1.Dia.Day - 09:00</b>
                             </div>
                         </div>
                         <div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSextaItaim.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSextaItaim.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSexta1.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSexta1.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSextaItaim.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSextaItaim.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSexta1.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSexta1.Local</b>
                             </div>
                         </div>
                         <div class="border-top-2px">
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSextaFerraz.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSextaFerraz.Dirigente</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSexta2.PossuiCampo?"":"none");">Responsável:@Model.PregacaoNaSemana.CampoSexta2.Dirigente</b>
                             </div>
                             <div class="linha-dados padding-top-left-5px">
-                                <b style="display:@(Model.PregacaoNaSemana.CampoSextaFerraz.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSextaFerraz.Local</b>
+                                <b style="display:@(Model.PregacaoNaSemana.CampoSexta2.PossuiCampo?"":"none");">Local:@Model.PregacaoNaSemana.CampoSexta2.Local</b>
                             </div>
                         </div>
                         <div class="linha-dados linha-dados-calendario">
@@ -449,9 +434,6 @@
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
                                 <b>DOMINGO/@Model.PregacaoNaSemana.CampoDomingo.Dia.Day - 11:45</b>
-                            </div>
-                            <div class="float-left width-10 textAlign-center borderRadius-5px height-28px bc-@Model.PregacaoNaSemana.CampoDomingo.Mapa.ToLower()">
-                                <b class="">@Model.PregacaoNaSemana.CampoDomingo.Mapa</b>
                             </div>
                         </div>
                         <div>

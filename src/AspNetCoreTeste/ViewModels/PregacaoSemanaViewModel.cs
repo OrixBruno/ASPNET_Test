@@ -11,47 +11,48 @@ namespace AspNetCoreTeste.ViewModels
     {
         public PregacaoSemanaViewModel()
         {
-            CampoSegundaItaim = new CampoViewModel();
-            CampoSegundaFerraz = new CampoViewModel();
-            CampoTercaItaim = new CampoViewModel();
-            CampoTercaFerraz = new CampoViewModel();
-            CampoQuartaItaim = new CampoViewModel();
-            CampoQuartaFerraz = new CampoViewModel();
-            CampoQuintaItaim = new CampoViewModel();
-            CampoQuintaFerraz = new CampoViewModel();
-            CampoSextaItaim = new CampoViewModel();
-            CampoSextaFerraz = new CampoViewModel();
+            CampoSegunda1 = new CampoViewModel();
+            CampoSegunda2 = new CampoViewModel();
+            CampoTerca1 = new CampoViewModel();
+            CampoTerca2 = new CampoViewModel();
+            CampoQuarta1 = new CampoViewModel();
+            CampoQuarta2 = new CampoViewModel();
+            CampoQuinta1 = new CampoViewModel();
+            CampoQuinta2 = new CampoViewModel();
+            CampoSexta1 = new CampoViewModel();
+            CampoSexta2 = new CampoViewModel();
             CampoSabado1 = new CampoViewModel();
             CampoSabado2 = new CampoViewModel();
             CampoSabado3 = new CampoViewModel();
             CampoDomingo = new CampoViewModel();
         }
         public ObjectId Id { get; set; }
+        public string TerritorioLista { get; set; }
 
-        [BsonElement("CampoSegundaItaim")]
-        public CampoViewModel CampoSegundaItaim { get; set; }
-        [BsonElement("CampoSegundaFerraz")]
-        public CampoViewModel CampoSegundaFerraz { get; set; }
+        [BsonElement("CampoSegunda1")]
+        public CampoViewModel CampoSegunda1 { get; set; }
+        [BsonElement("CampoSegunda2")]
+        public CampoViewModel CampoSegunda2 { get; set; }
 
-        [BsonElement("CampoTercaItaim")]
-        public CampoViewModel CampoTercaItaim { get; set; }
-        [BsonElement("CampoTercaFerraz")]
-        public CampoViewModel CampoTercaFerraz { get; set; }
+        [BsonElement("CampoTerca1")]
+        public CampoViewModel CampoTerca1 { get; set; }
+        [BsonElement("CampoTerca2")]
+        public CampoViewModel CampoTerca2 { get; set; }
 
-        [BsonElement("CampoQuartaItaim")]
-        public CampoViewModel CampoQuartaItaim { get; set; }
-        [BsonElement("CampoQuartaFerraz")]
-        public CampoViewModel CampoQuartaFerraz { get; set; }
+        [BsonElement("CampoQuarta1")]
+        public CampoViewModel CampoQuarta1 { get; set; }
+        [BsonElement("CampoQuarta2")]
+        public CampoViewModel CampoQuarta2 { get; set; }
 
-        [BsonElement("CampoQuintaItaim")]
-        public CampoViewModel CampoQuintaItaim { get; set; }
-        [BsonElement("CampoQuintaFerraz")]
-        public CampoViewModel CampoQuintaFerraz { get; set; }
+        [BsonElement("CampoQuinta1")]
+        public CampoViewModel CampoQuinta1 { get; set; }
+        [BsonElement("CampoQuinta2")]
+        public CampoViewModel CampoQuinta2 { get; set; }
 
-        [BsonElement("CampoSextaItaim")]
-        public CampoViewModel CampoSextaItaim { get; set; }
-        [BsonElement("CampoSextaFerraz")]
-        public CampoViewModel CampoSextaFerraz { get; set; }
+        [BsonElement("CampoSexta1")]
+        public CampoViewModel CampoSexta1 { get; set; }
+        [BsonElement("CampoSexta2")]
+        public CampoViewModel CampoSexta2 { get; set; }
 
         [BsonElement("CampoSabado1")]
         public CampoViewModel CampoSabado1 { get; set; }

@@ -39,14 +39,14 @@ namespace AspNetCoreTeste.Services
         {
             return await _db.GetCollection<PregacaoSemanaViewModel>(_collection)
                 .Find(Builders<PregacaoSemanaViewModel>.Filter.Empty)
-                .Project(new ProjectionDefinitionBuilder<PregacaoSemanaViewModel>().Expression(x => x.CampoTercaItaim.Dia))
+                .Project(new ProjectionDefinitionBuilder<PregacaoSemanaViewModel>().Expression(x => x.CampoTerca1.Dia))
                 .ToListAsync();
         }
         public async Task<PregacaoSemanaViewModel> GetPorData(DateTime date)
         {
             try
             {
-                var filter = Builders<PregacaoSemanaViewModel>.Filter.Eq(n => n.CampoTercaItaim.Dia, date);
+                var filter = Builders<PregacaoSemanaViewModel>.Filter.Eq(n => n.CampoTerca1.Dia, date);
                 var objeto = await _db.GetCollection<PregacaoSemanaViewModel>(_collection).FindAsync(filter);
                 return objeto.ToList().LastOrDefault();
             }

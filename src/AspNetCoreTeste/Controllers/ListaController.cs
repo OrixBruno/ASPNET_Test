@@ -56,7 +56,6 @@ namespace AspNetCoreTeste.Controllers
             VerificaPrimeiraTercaSemana(_calendar.GetDateInfo(_primeiroDiaMes));
             GerarListaDirigentes();
             GerarListaSaidas();
-            GerarListaTerritorios();
             GerarTodasTerçasMes();
 
             return View(_semanaCampo);
@@ -65,7 +64,7 @@ namespace AspNetCoreTeste.Controllers
         public IActionResult Gerador(PregacaoSemanaViewModel pregacaoSemana)
         {
             _semanaCampo = pregacaoSemana;
-            AdicionarDatasSemana(_semanaCampo.CampoTercaItaim.Dia);
+            AdicionarDatasSemana(_semanaCampo.CampoTerca1.Dia);
             var pregacao = _service.Create(pregacaoSemana);
             var lista = _service.GetLista();
             return View("Campo", _calendar.getCalender(_semanaCampo.CampoDomingo.Dia.Month, _semanaCampo.CampoDomingo.Dia.Year, _semanaCampo));
@@ -95,6 +94,8 @@ namespace AspNetCoreTeste.Controllers
                 new SelectListItem() { Text = "Emerson", Value = "Emerson" },
                 new SelectListItem() { Text = "Maycon", Value = "Maycon" },
                 new SelectListItem() { Text = "Sullen", Value = "Sullen" },
+                new SelectListItem() { Text = "Vlazia", Value = "Vlazia" },
+                new SelectListItem() { Text = "Kelma", Value = "Kelma" },
                 new SelectListItem() { Text = "Ricardo", Value = "Ricardo" }
             };
         }
@@ -114,20 +115,6 @@ namespace AspNetCoreTeste.Controllers
                 new SelectListItem() { Text = "Salão Camargo Velho", Value = "Salão Camargo Velho" }
             };
         }
-        private void GerarListaTerritorios()
-        {
-            ViewBag.SelectListTerriorios = new List<SelectListItem>() {
-                new SelectListItem() { Text = "A", Value = "A" },
-                new SelectListItem() { Text = "B", Value = "B" },
-                new SelectListItem() { Text = "C", Value = "C" },
-                new SelectListItem() { Text = "D", Value = "D" },
-                new SelectListItem() { Text = "E", Value = "E" },
-                new SelectListItem() { Text = "F", Value = "F" },
-                new SelectListItem() { Text = "G", Value = "G" },
-                new SelectListItem() { Text = "H", Value = "H" },
-                new SelectListItem() { Text = "I", Value = "I" }
-            };
-        }
         private void GerarTodasTerçasMes()
         {
             ViewBag.SelectListSemanas = new List<SelectListItem>() {
@@ -145,45 +132,45 @@ namespace AspNetCoreTeste.Controllers
             switch (primeiroDiaSemana)
             {
                 case 0:
-                    _semanaCampo.CampoTercaItaim.Dia = _primeiroDiaMes.AddDays(2);
+                    _semanaCampo.CampoTerca1.Dia = _primeiroDiaMes.AddDays(2);
                     _dataPrimeiraTercaMes = _primeiroDiaMes.AddDays(2);
                     break;
                 case 1:
-                    _semanaCampo.CampoTercaItaim.Dia = _primeiroDiaMes.AddDays(1);
+                    _semanaCampo.CampoTerca1.Dia = _primeiroDiaMes.AddDays(1);
                     _dataPrimeiraTercaMes = _primeiroDiaMes.AddDays(1);
                     break;
                 case 2:
-                    _semanaCampo.CampoTercaItaim.Dia = _primeiroDiaMes;
+                    _semanaCampo.CampoTerca1.Dia = _primeiroDiaMes;
                     _dataPrimeiraTercaMes = _primeiroDiaMes;
                     break;
                 case 3:
-                    _semanaCampo.CampoTercaItaim.Dia = _primeiroDiaMes.AddDays(-1);
+                    _semanaCampo.CampoTerca1.Dia = _primeiroDiaMes.AddDays(-1);
                     _dataPrimeiraTercaMes = _primeiroDiaMes.AddDays(-1);
                     break;
                 case 4:
-                    _semanaCampo.CampoTercaItaim.Dia = _primeiroDiaMes.AddDays(-2);
+                    _semanaCampo.CampoTerca1.Dia = _primeiroDiaMes.AddDays(-2);
                     _dataPrimeiraTercaMes = _primeiroDiaMes.AddDays(-2);
                     break;
                 case 5:
-                    _semanaCampo.CampoTercaItaim.Dia = _primeiroDiaMes.AddDays(-3);
+                    _semanaCampo.CampoTerca1.Dia = _primeiroDiaMes.AddDays(-3);
                     _dataPrimeiraTercaMes = _primeiroDiaMes.AddDays(-3);
                     break;
                 case 6:
-                    _semanaCampo.CampoTercaItaim.Dia = _primeiroDiaMes.AddDays(-4);
+                    _semanaCampo.CampoTerca1.Dia = _primeiroDiaMes.AddDays(-4);
                     _dataPrimeiraTercaMes = _primeiroDiaMes.AddDays(-4);
                     break;
             }            
         }
         private void AdicionarDatasSemana(DateTime primeiraTerca)
         {
-            _semanaCampo.CampoSegundaItaim.Dia = primeiraTerca.AddDays(-1);
-            _semanaCampo.CampoSegundaFerraz.Dia = primeiraTerca.AddDays(-1);
-            _semanaCampo.CampoQuartaItaim.Dia = primeiraTerca.AddDays(1);
-            _semanaCampo.CampoQuartaFerraz.Dia = primeiraTerca.AddDays(1);
-            _semanaCampo.CampoQuintaItaim.Dia = primeiraTerca.AddDays(2);
-            _semanaCampo.CampoQuintaFerraz.Dia = primeiraTerca.AddDays(2);
-            _semanaCampo.CampoSextaItaim.Dia = primeiraTerca.AddDays(3);
-            _semanaCampo.CampoSextaFerraz.Dia = primeiraTerca.AddDays(3);
+            _semanaCampo.CampoSegunda1.Dia = primeiraTerca.AddDays(-1);
+            _semanaCampo.CampoSegunda2.Dia = primeiraTerca.AddDays(-1);
+            _semanaCampo.CampoQuarta1.Dia = primeiraTerca.AddDays(1);
+            _semanaCampo.CampoQuarta2.Dia = primeiraTerca.AddDays(1);
+            _semanaCampo.CampoQuinta1.Dia = primeiraTerca.AddDays(2);
+            _semanaCampo.CampoQuinta2.Dia = primeiraTerca.AddDays(2);
+            _semanaCampo.CampoSexta1.Dia = primeiraTerca.AddDays(3);
+            _semanaCampo.CampoSexta2.Dia = primeiraTerca.AddDays(3);
             _semanaCampo.CampoSabado1.Dia = primeiraTerca.AddDays(4);
             _semanaCampo.CampoSabado2.Dia = primeiraTerca.AddDays(4);
             _semanaCampo.CampoSabado3.Dia = primeiraTerca.AddDays(4);
