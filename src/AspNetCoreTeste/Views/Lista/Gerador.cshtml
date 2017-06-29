@@ -65,71 +65,79 @@
             <div>
                 <h3>Terça Feira:</h3>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoTerca1.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control terca1" asp-for="CampoTerca1.Horario" disabled="disabled" value="09:00">
-            </div>               
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control terca1" asp-for="CampoTerca1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoTerca1.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control terca1" asp-for="CampoTerca1.Horario" disabled="disabled" value="09:00">
+                </div>               
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control terca1" asp-for="CampoTerca1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control terca1" asp-for="CampoTerca1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control terca1" asp-for="CampoTerca1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoTerca2.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control terca2" asp-for="CampoTerca2.Horario" disabled="disabled" value="18:00">
+                </div>               
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control terca2" asp-for="CampoTerca2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control terca2" asp-for="CampoTerca2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoTerca2.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control terca2" asp-for="CampoTerca2.Horario" disabled="disabled" value="18:00">
-            </div>               
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control terca2" asp-for="CampoTerca2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
-            </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control terca2" asp-for="CampoTerca2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
-            </div>  
         </div>
         <hr />
         <div class="form-inline">
             <div>
                 <h3>Quarta Feira:</h3>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoQuarta1.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control quarta1" asp-for="CampoQuarta1.Horario" disabled="disabled" value="09:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control quarta1" asp-for="CampoQuarta1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoQuarta1.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control quarta1" asp-for="CampoQuarta1.Horario" disabled="disabled" value="09:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control quarta1" asp-for="CampoQuarta1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control quarta1" asp-for="CampoQuarta1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control quarta1" asp-for="CampoQuarta1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoQuarta2.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control quarta2" asp-for="CampoQuarta2.Horario" disabled="disabled" value="09:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control quarta2" asp-for="CampoQuarta2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
-            </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control quarta2" asp-for="CampoQuarta2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            <div>    
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoQuarta2.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control quarta2" asp-for="CampoQuarta2.Horario" disabled="disabled" value="09:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control quarta2" asp-for="CampoQuarta2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control quarta2" asp-for="CampoQuarta2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
             </div>
         </div>
         <hr />
@@ -137,35 +145,39 @@
             <div>
                 <h3>Quinta Feira:</h3>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoQuinta1.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control quinta1" asp-for="CampoQuinta1.Horario" disabled="disabled" value="09:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control quinta1" asp-for="CampoQuinta1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoQuinta1.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control quinta1" asp-for="CampoQuinta1.Horario" disabled="disabled" value="09:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control quinta1" asp-for="CampoQuinta1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control quinta1" asp-for="CampoQuinta1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control quinta1" asp-for="CampoQuinta1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoQuinta2.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control quinta2" asp-for="CampoQuinta2.Horario" disabled="disabled" value="09:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control quinta2" asp-for="CampoQuinta2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
-            </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control quinta2" asp-for="CampoQuinta2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+            <div>                
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoQuinta2.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control quinta2" asp-for="CampoQuinta2.Horario" disabled="disabled" value="09:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control quinta2" asp-for="CampoQuinta2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control quinta2" asp-for="CampoQuinta2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
             </div>
         </div>
         <hr />
@@ -173,36 +185,40 @@
             <div>
                 <h3>Sexta Feira:</h3>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoSexta1.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control sexta1" asp-for="CampoSexta1.Horario"  disabled="disabled" value="09:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control sexta1" asp-for="CampoSexta1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoSexta1.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control sexta1" asp-for="CampoSexta1.Horario"  disabled="disabled" value="09:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control sexta1" asp-for="CampoSexta1.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control sexta1" asp-for="CampoSexta1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control sexta1" asp-for="CampoSexta1.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoSexta2.PossuiCampo">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control sexta2" asp-for="CampoSexta2.Horario"  disabled="disabled" value="09:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control sexta2" asp-for="CampoSexta2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
-            </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control sexta2" asp-for="CampoSexta2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
-            </div>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoSexta2.PossuiCampo">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control sexta2" asp-for="CampoSexta2.Horario"  disabled="disabled" value="09:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control sexta2" asp-for="CampoSexta2.Dirigente" asp-items="ViewBag.SelectListDirigente" disabled="disabled"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control sexta2" asp-for="CampoSexta2.Local" asp-items="ViewBag.SelectListSaidas" disabled="disabled"></select>
+                </div>
+            <div>
         </div>
         <hr />
         <div class="form-inline" id="divDirigentes">
@@ -212,56 +228,62 @@
             <div>
                 <h4>Grupo 1:</h4>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoSabado1.PossuiCampo" class="displayNone">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control" asp-for="CampoSabado1.Horario" value="09:10">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control" asp-for="CampoSabado1.Dirigente" asp-items="ViewBag.SelectListDirigente"></select>
-            </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control" asp-for="CampoSabado1.Local" asp-items="ViewBag.SelectListSaidas"  value="Salão Fazenda Itaim"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoSabado1.PossuiCampo" class="displayNone">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control" asp-for="CampoSabado1.Horario" value="09:10">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control" asp-for="CampoSabado1.Dirigente" asp-items="ViewBag.SelectListDirigente"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control" asp-for="CampoSabado1.Local" asp-items="ViewBag.SelectListSaidas"  value="Salão Fazenda Itaim"></select>
+                </div>
             </div>
             <div>
                 <h4>Grupo 2:</h4>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoSabado2.PossuiCampo" class="displayNone">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control" asp-for="CampoSabado2.Horario" value="15:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control" asp-for="CampoSabado2.Dirigente" asp-items="ViewBag.SelectListDirigente"></select>
-            </div>
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control" asp-for="CampoSabado2.Local" asp-items="ViewBag.SelectListSaidas"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoSabado2.PossuiCampo" class="displayNone">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control" asp-for="CampoSabado2.Horario" value="15:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control" asp-for="CampoSabado2.Dirigente" asp-items="ViewBag.SelectListDirigente"></select>
+                </div>
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control" asp-for="CampoSabado2.Local" asp-items="ViewBag.SelectListSaidas"></select>
+                </div>
             </div>
             <div>
                 <h4>Grupo 3:</h4>
             </div>
-            <div class="input-group">
-                <span class="input-group-addon">
-                    <input type="checkbox" asp-for="CampoSabado3.PossuiCampo" class="displayNone">
-                    <label>Hora:</label>
-                </span>
-                <input type="text" class="form-control" asp-for="CampoSabado3.Horario" value="15:00">
-            </div> 
-            <div class="form-group">
-                <label>Responsável:</label>
-                <select class="form-control" asp-for="CampoSabado3.Dirigente" asp-items="ViewBag.SelectListDirigente"></select>
-            </div>        
-            <div class="form-group">
-                <label>Local:</label>
-                <select class="form-control" asp-for="CampoSabado3.Local" asp-items="ViewBag.SelectListSaidas"></select>
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" asp-for="CampoSabado3.PossuiCampo" class="displayNone">
+                        <label>Hora:</label>
+                    </span>
+                    <input type="text" class="form-control" asp-for="CampoSabado3.Horario" value="15:00">
+                </div> 
+                <div class="form-group">
+                    <label>Responsável:</label>
+                    <select class="form-control" asp-for="CampoSabado3.Dirigente" asp-items="ViewBag.SelectListDirigente"></select>
+                </div>        
+                <div class="form-group">
+                    <label>Local:</label>
+                    <select class="form-control" asp-for="CampoSabado3.Local" asp-items="ViewBag.SelectListSaidas"></select>
+                </div>
             </div>
         </div>     
         <hr />   

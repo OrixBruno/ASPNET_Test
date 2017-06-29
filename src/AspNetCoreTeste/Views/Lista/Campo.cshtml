@@ -237,7 +237,7 @@
                     <div class="float-left width-50" style="display:@(Model.PregacaoNaSemana.CampoSegunda2.PossuiCampo?"":"none");">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>SEGUNDA/@Model.PregacaoNaSemana.CampoSegunda1.Dia.Day - 09:00</b>
+                                <b>@Model.PregacaoNaSemana.CampoSegunda1.Dia.Day/SEGUNDA </b><b class="horario">@Model.PregacaoNaSemana.CampoSegunda1.Horario</b>
                             </div>
                         </div>
                         <div>
@@ -275,7 +275,7 @@
                     <div class="float-left width-50 border-left">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>TERÇA/@Model.PregacaoNaSemana.CampoTerca1.Dia.Day - 14:00</b>
+                                <b>@Model.PregacaoNaSemana.CampoTerca1.Dia.Day/TERÇA @Model.PregacaoNaSemana.CampoTerca1.Horario</b>
                             </div>
                         </div>
                         <div>
@@ -316,7 +316,7 @@
                     <div class="float-left width-50">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>QUARTA/@Model.PregacaoNaSemana.CampoQuarta1.Dia.Day - 09:00</b>
+                                <b>@Model.PregacaoNaSemana.CampoQuarta1.Dia.Day/QUARTA </b><b class="horario">@Model.PregacaoNaSemana.CampoQuarta1.Horario</b>
                             </div>
                         </div>
                         <div>
@@ -354,7 +354,7 @@
                     <div class="float-left width-50 border-left">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>QUINTA/@Model.PregacaoNaSemana.CampoQuinta1.Dia.Day - 09:00</b>
+                                <b>@Model.PregacaoNaSemana.CampoQuinta1.Dia.Day/QUINTA </b><b class="horario">@Model.PregacaoNaSemana.CampoQuinta1.Horario</b>
                             </div>
                         </div>
                         <div>
@@ -395,7 +395,7 @@
                     <div class="float-left width-50">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>SEXTA/@Model.PregacaoNaSemana.CampoSexta1.Dia.Day - 09:00</b>
+                                <b>@Model.PregacaoNaSemana.CampoSexta1.Dia.Day/SEXTA </b><b class="horario">@Model.PregacaoNaSemana.CampoSexta1.Horario</b>
                             </div>
                         </div>
                         <div>
@@ -433,7 +433,7 @@
                     <div class="float-left width-50 border-left">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>DOMINGO/@Model.PregacaoNaSemana.CampoDomingo.Dia.Day - 11:45</b>
+                                <b>@Model.PregacaoNaSemana.CampoDomingo.Dia.Day/DOMINGO </b><b class="horario">@Model.PregacaoNaSemana.CampoDomingo.Horario</b>
                             </div>
                         </div>
                         <div>
@@ -473,7 +473,7 @@
                     <div class="float-left width-50" style="width: 33% !important;">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>SABADO/@Model.PregacaoNaSemana.CampoSabado1.Dia.Day</b>
+                                <b>@Model.PregacaoNaSemana.CampoSabado1.Dia.Day/SABADO</b>
                             </div>
                             <div class="float-left width-10 textAlign-center borderRadius-5px height-28px">
                                 <b class="">1</b>
@@ -483,7 +483,7 @@
                             <b>Responsável:</br>@Model.PregacaoNaSemana.CampoSabado1.Dirigente</b>
                         </div>
                         <div class="linha-dados padding-top-left-5px" style="padding-top: 30px;">
-                            <b>09:10</b>
+                            <b>@Model.PregacaoNaSemana.CampoSabado1.Horario</b>
                         </div>
                         <div class="linha-dados padding-top-left-5px" style="padding-top: 30px;">
                             <b>Local:@Model.PregacaoNaSemana.CampoSabado1.Local</b>
@@ -495,7 +495,7 @@
                     <div class="float-left width-50 border-left" style="width: 33% !important;">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>SABADO/@Model.PregacaoNaSemana.CampoSabado1.Dia.Day</b>
+                                <b>@Model.PregacaoNaSemana.CampoSabado1.Dia.Day/SABADO</b>
                             </div>
                             <div class="float-left width-10 textAlign-center borderRadius-5px height-28px">
                                 <b class="">2</b>
@@ -505,7 +505,7 @@
                             <b>Responsável:</br>@Model.PregacaoNaSemana.CampoSabado2.Dirigente</b>
                         </div>
                         <div class="linha-dados padding-top-left-5px" style="padding-top: 30px;">
-                            <b>15:00</b>
+                            <b>@Model.PregacaoNaSemana.CampoSabado2.Horario</b>
                         </div>
                         <div class="linha-dados padding-top-left-5px" style="padding-top: 30px;">
                             <b>Local:@Model.PregacaoNaSemana.CampoSabado2.Local</b>
@@ -517,7 +517,7 @@
                     <div class="float-left width-50 border-left" style="width: 33% !important;">
                         <div class="linha-dados padding-top-left-5px">
                             <div class="float-left width-90">
-                                <b>SABADO/@Model.PregacaoNaSemana.CampoSabado1.Dia.Day</b>
+                                <b>@Model.PregacaoNaSemana.CampoSabado1.Dia.Day/SABADO</b>
                             </div>
                             <div class="float-left width-10 textAlign-center borderRadius-5px height-28px">
                                 <b class="">3</b>
@@ -527,7 +527,7 @@
                             <b>Responsável:</br>@Model.PregacaoNaSemana.CampoSabado3.Dirigente</b>
                         </div>
                         <div class="linha-dados padding-top-left-5px" style="padding-top: 30px;">
-                            <b>15:00</b>
+                            <b>@Model.PregacaoNaSemana.CampoSabado3.Horario</b>
                         </div>
                         <div class="linha-dados padding-top-left-5px" style="padding-top: 30px;">
                             <b>Local:@Model.PregacaoNaSemana.CampoSabado3.Local</b>
