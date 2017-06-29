@@ -282,3 +282,7 @@ tbody a h3 {
 .horario{
     color:red;
 }
+
+.displayNone{
+    display:none;
+}
